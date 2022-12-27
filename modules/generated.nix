@@ -2317,7 +2317,7 @@
     // (if attrs ? stopAfterClientDisconnect && attrs.stopAfterClientDisconnect != null then { StopAfterClientDisconnect = attrs.stopAfterClientDisconnect; } else {})
     // (if attrs ? task && builtins.isAttrs attrs.task then { Tasks = mapAttrsToList (_: Task.toJSON) attrs.task; } else {})
     // (if attrs ? update && attrs.update != null then { Update = UpdateStrategy.toJSON attrs.update; } else {})
-    // (if attrs ? volume && builtins.isAttrs attrs.volume then { Volumes = mapAttrs (_name: _value: VolumeRequest.toJSON) attrs.volume; } else {})
+    // (if attrs ? volume && builtins.isAttrs attrs.volume then { Volumes = mapAttrs (_name: VolumeRequest.toJSON) attrs.volume; } else {})
   );
 
   # Convert a TaskGroup JSON object into a Nix module.
